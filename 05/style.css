@@ -1,3 +1,9 @@
+*, 
+*::before,
+*::after{
+   box-sizing: border-box;
+}
+
 body, html{
    padding: 0;
    margin: 0;
@@ -9,16 +15,23 @@ body, html{
 .container{
    background-color: #23424A;
    color: white;
+   padding: 4.5em 0;
 }
 
 div:has( > h1){
    width: 70%;
+   max-width: 50rem;
    min-height: 100vh;
-   padding: 4.5em;
+   margin: 0 auto;
+   
 }
 
 div:has( > h1) > :is(h1, p, a){
-   margin: 0;
+   margin: 0;   
+}
+
+div:has( > h1) > :is(h1, p){
+   width: 70%;
 }
 
 div:has( > h1) > a{
@@ -44,7 +57,20 @@ div:has( > h1) > h1 + p{
 
 h1 ~ a {
    padding: 0.5625em 2em;
+   text-transform: uppercase;
    display: inline-block;
    font-weight: bold;
-   border-radius: 20% / 80%;
+   border-radius: 15% / 80%;
+}
+
+@media screen and (max-width: 25em){
+   html{
+      font-size: 67%;
+   }
+}
+
+@media screen and (min-width: 100em){
+   html{
+      font-size: 150%;
+   }
 }
