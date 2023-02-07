@@ -10,6 +10,14 @@
    the sidebar in the section
    below
 
+
+   - All text is in the text.md file
+
+// Requirements
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
+*/
+
 */
 
 *, *::before, *::after {
@@ -36,6 +44,63 @@ h1 {
 .row {
     display: flex;
     gap: 5%;
+}
+
+header{
+    background-color: #136C72;
+}
+
+
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    flex-grow: 1;
+}
+
+.nav{
+    flex-grow: 1;
+}
+
+.nav__list{
+    gap: 0;
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__list--primary{
+    flex-grow: 1;
+}
+
+.nav__item{
+    text-align: center;
+    padding: .75em 1em;
+}
+
+.nav__link{
+    display: inline-block;        
+    
+    width: 100%;
+    padding: .75em 1em;
+    
+    color: white;
+    font-size: .875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav__link--button{
+    color: #136C72;
+    font-weight: 900;
+    background-color: white;
+    border-radius: 100px;
 }
 
 .col {
