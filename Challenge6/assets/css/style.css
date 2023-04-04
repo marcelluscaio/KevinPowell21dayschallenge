@@ -25,5 +25,11 @@ body{
 }
 
 .header > span{
-   font-size:var(--fs-1)
+   font-size:var(--fs-1);
+   color: var(--color2);
+}
+
+.header > h1{
+   font-size:var(--fs-4);
+   color: var(--color2);
 }
