@@ -1,5 +1,13 @@
 :root{
-   --color1: #F3EED9
+   --color1: #F3EED9;
+   --color2: #824936;
+   --color3: #222C2A;
+
+   --fs-1: 18px;
+   --fs-2: 21px;
+   --fs-3: 36px;
+   --fs-4: 60px;
+
 }
 
 *{
@@ -14,4 +22,8 @@ body{
 
 .header{
    background-color: var(--color1); 
+}
+
+.header > span{
+   font-size:var(--fs-1)
 }
