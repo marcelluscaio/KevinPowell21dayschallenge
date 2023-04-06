@@ -21,15 +21,28 @@ body{
 
 
 .header{
-   background-color: var(--color1); 
+   padding-block: 30vh;
+   background-color: var(--color1);
+
 }
 
-.header > span{
+.container{
+   width: 70%;
+   margin-inline: auto;
+   text-align: center;
+}
+
+.header span{
    font-size:var(--fs-1);
    color: var(--color2);
+   text-align: center;
 }
 
-.header > h1{
+.header h1{
    font-size:var(--fs-4);
+   font-weight: bold;
    color: var(--color2);
+   text-align: center;
+
+   margin: 0;
 }
