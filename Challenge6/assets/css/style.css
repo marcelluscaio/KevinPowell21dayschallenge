@@ -8,6 +8,8 @@
    --fs-3: 36px;
    --fs-4: 60px;
 
+   --width: 80%;
+
 }
 
 *{
@@ -48,6 +50,8 @@ body{
 }
 
 .design{
+   width: var(--width);
+   margin-inline: auto;
    padding-block: 15vh;
 }
 
@@ -58,4 +62,15 @@ body{
    text-align: center;
 
    margin: 0;
+}
+
+.design > .columns{
+   display: flex;
+   gap: var(--fs-2);
+}
+
+.design > .columns > p{
+   font-size: var(--fs-1);
+   line-height: 1.5;
+   color: var(--color3);
 }
