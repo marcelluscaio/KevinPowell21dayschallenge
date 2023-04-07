@@ -196,6 +196,19 @@ section.flex > :last-child{
     margin-bottom: 3em;
 }
 
+@media screen and (max-width: 50em) {
+    .row {
+        flex-direction: column-reverse;
+        gap: 5vh;
+        align-items: center;
+    }
+
+    .hero__img{
+        width: 60%;
+        align-self:auto
+    }
+}
+
 
 @media screen and (max-width: 25em) {
     html{
@@ -216,15 +229,3 @@ section.flex > :last-child{
     }
 }
 
-@media screen and (max-width: 50em) {
-    .row {
-        flex-direction: column-reverse;
-        gap: 5vh;
-        align-items: center;
-    }
-
-    .hero__img{
-        width: 60%;
-        align-self:auto
-    }
-}
