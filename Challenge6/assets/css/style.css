@@ -10,6 +10,7 @@
 
    --width: 80%;
 
+
 }
 
 *{
@@ -19,6 +20,10 @@
 body{
    padding: 0;
    margin: 0;
+}
+
+img{
+   max-width: 100%;
 }
 
 
@@ -69,8 +74,87 @@ body{
    gap: var(--fs-2);
 }
 
+.design > .columns > *{
+   width: 100%;
+}
+
 .design > .columns > p{
    font-size: var(--fs-1);
-   line-height: 1.5;
+   line-height: 1.75;
    color: var(--color3);
+
+   margin: 0;
+   margin-top: 2em;
+}
+
+.custom{
+   padding-block: 15vh;
+   background-color: var(--color3);
+   color: var(--color1);
+}
+
+.custom > div{
+   display: flex;
+   flex-direction: row-reverse;
+   gap: var(--fs-2);
+
+   width: var(--width);
+   margin-inline: auto;
+}
+
+.custom > div > *{
+   width: calc(50% - (var(--fs-2)/2));
+}
+
+.created{
+   display: flex;
+   gap: var(--fs-2);
+
+   padding-block: 15vh;
+   padding-inline: calc((100% - var(--width)) / 2);
+   background-color: var(--color2);
+
+   color: var(--color1);
+}
+
+.created > *{
+   width: calc(50% - (var(--fs-2)/2));
+}
+
+:is(.custom, .created) h2{
+   font-size:var(--fs-3);
+   font-weight: bold;
+   color: var(--color1);
+
+   margin: 0;
+}
+
+:is(.custom, .created) p{
+   margin: 0;
+   margin-top: 1.5em;
+   
+   line-height: 1.5;
+}
+
+@media screen and (max-width: 45em){
+   .design > .columns,
+   .custom > div,
+   .created{
+      flex-direction: column;
+   }
+
+   .custom > div > *,
+   .created > *{
+      width: 100%;
+   }
+
+   .custom > div > img,
+   .created > img{
+      width: 70%;
+      margin-inline: auto;
+   }
+
+   :is(.custom, .created) h2{
+      text-align: center;
+   }
 }
