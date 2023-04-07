@@ -11,7 +11,8 @@ Use of em and rem
 
 Not use height. If necessary, use min-height or padding
 
-Technique: instead of using lateral padding, set width to child
+Technique: instead of using lateral padding, set width to child.
+It depends.
 
 Flexbox: parent is flex, children are going to take minimum space as possible.
 

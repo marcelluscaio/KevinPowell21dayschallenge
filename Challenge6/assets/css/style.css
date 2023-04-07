@@ -121,6 +121,11 @@ img{
    width: calc(50% - (var(--fs-2)/2));
 }
 
+.custom > div > img,
+.created > img{
+   align-self: flex-start;
+}
+
 :is(.custom, .created) h2{
    font-size:var(--fs-3);
    font-weight: bold;
