@@ -9,8 +9,6 @@
    --fs-4: 60px;
 
    --width: 80%;
-
-
 }
 
 *{
@@ -26,22 +24,22 @@ img{
    max-width: 100%;
 }
 
-
 .header{
    padding-block: 30vh;
    background-color: var(--color1);
-
 }
 
 .container{
    width: 70%;
    margin-inline: auto;
+
    text-align: center;
 }
 
 .header span{
    font-size:var(--fs-1);
    color: var(--color2);
+
    text-align: center;
 }
 
@@ -61,12 +59,12 @@ img{
 }
 
 .design h2{
+   margin: 0;
+   
    font-size:var(--fs-3);
    font-weight: bold;
    color: var(--color2);
    text-align: center;
-
-   margin: 0;
 }
 
 .design > .columns{
@@ -79,12 +77,12 @@ img{
 }
 
 .design > .columns > p{
+   margin: 0;
+   margin-top: 2em;
+
    font-size: var(--fs-1);
    line-height: 1.75;
    color: var(--color3);
-
-   margin: 0;
-   margin-top: 2em;
 }
 
 .custom{
@@ -127,11 +125,11 @@ img{
 }
 
 :is(.custom, .created) h2{
+   margin: 0;
+   
    font-size:var(--fs-3);
    font-weight: bold;
    color: var(--color1);
-
-   margin: 0;
 }
 
 :is(.custom, .created) p{
