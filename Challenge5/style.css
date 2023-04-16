@@ -197,10 +197,23 @@ section.flex > :last-child{
 }
 
 @media screen and (max-width: 50em) {
-    .row {
+    .row:not(:has(nav), nav, .nav__list) {
         flex-direction: column-reverse;
         gap: 5vh;
         align-items: center;
+    }
+
+    .row:is(:has(nav), nav, .nav__list) {
+        flex-direction: column; 
+    }
+
+    .nav__link:not(.nav__link--button){
+        padding: 0;
+    }
+
+    .nav__link--button{
+        position: relative;
+        left: -1em;
     }
 
     .hero__img{
@@ -215,7 +228,7 @@ section.flex > :last-child{
         font-size: 75%;
     }
 
-    .row{
+    .row:not(:has(nav), nav, .nav__list) {
         flex-direction: column;
     }
     
