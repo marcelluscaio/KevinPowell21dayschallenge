@@ -1,0 +1,42 @@
+/*Variables*/
+:root{
+   --color-blue-400: #2E323F;
+   --color-blue-300: #3B4050;
+   --color-blue-200: #6F737F;
+   --color-beige-400: #A59678;
+   --color-white-100: #DDDDDD;
+
+   --ff-main: 'Oswald', sans-serif;
+
+   --fw-bold: 700;
+   --fw-regular: 400;
+
+   --fs-1: clamp(0.88rem, calc(0.80rem + 0.37vw), 1.38rem); /*18px*/
+   --fs-2: clamp(1.09rem, calc(0.99rem + 0.54vw), 1.83rem); /*21px*/
+   --fs-3: clamp(1.37rem, calc(1.21rem + 0.79vw), 2.44rem); /*24px*/
+   --fs-4: clamp(1.71rem, calc(1.48rem + 1.14vw), 3.26rem); /*30px*/
+   --fs-5: clamp(2.14rem, calc(1.81rem + 1.62vw), 4.34rem); /*36px*/
+   --fs-6: clamp(2.67rem, calc(2.21rem + 2.29vw), 5.79rem); /*90px*/
+}
+
+/*General styling*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: var(--ff-main);
+   font-weight: var(--fw-bold);
+   font-size: var(--fs-1);
+   line-height: 1.5;
+}
+
+ul{
+   list-style: none;
+}
+
+a{
+   text-decoration: none;
+}
