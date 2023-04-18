@@ -91,6 +91,8 @@ input[type="checkbox"]{
 
    width: 10%;
    aspect-ratio: 1;
+
+   transform-origin: 50%;
 }
 
 .burger__line{
@@ -101,15 +103,23 @@ input[type="checkbox"]{
    height: calc(var(--fs-1) / 6);
    background-color: var(--color-white-100);
 
-   transition: opacity .5s ease-in-out,
+   transition: opacity .5s ease-in-out/*,
                top .75s ease-in-out,
                width .75s ease-in-out .75s,
                transform 0s ease-in-out 1.5s,
-               height 1s ease-in-out 1.5s;
+               height 1s ease-in-out 1.5s*/;
+   transform-origin: 0;
+}
+input[type="checkbox"]:checked ~ .header__wrapper__burger{
+   animation-name: lineShrinking;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards; 
 }
 
 .burger__line:nth-child(1){
    top: 15%;
+   --rotation: 45deg;
 }
 
 .burger__line:nth-child(2){
@@ -118,28 +128,50 @@ input[type="checkbox"]{
 
 .burger__line:nth-child(3){
    top: 85%;
+   --rotation: -45deg;
 }
 
-input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(1){
-   top: 50%;
-
-   height: 80%;
-   width: calc(var(--fs-1) / 6);
-
-   transform: rotate(-45deg) scale(1.35);
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(1),
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(3){
+   animation-name: lineMovement;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
 }
 
 input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(2){
    opacity: 0;
 }
 
-input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(3){
-   top: 50%;
+@keyframes lineShrinking{
+   30%{
+      transform: scaleX(1);
+   }
+   50%{
+      transform: scaleX(.1);
+   }
+   51%{
+      transform: scaleX(.1);
+   }
+   100%{
+      transform: scaleX(1)
+   }
+}
 
-   height: 80%;
-   width: calc(var(--fs-1) / 6);
-
-   transform: rotate(45deg) scale(1.35);
+@keyframes lineMovement{
+   30%{
+      top: 50%;
+      transform: rotate(0deg);
+   }
+   50%{
+      transform: rotate(0deg);
+   }
+   51%{
+      transform: rotateY(var(--rotation)) scaleX(1);
+   }
+   100%{
+      transform: rotateZ(var(--rotation)) scaleX(1.25);
+   }
 }
 
 .header__wrapper nav{
