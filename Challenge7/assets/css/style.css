@@ -86,10 +86,7 @@ input[type="checkbox"]{
 }
 
 .header__wrapper__burger{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-
+   position: relative;
    z-index: 1;
 
    width: 10%;
@@ -97,10 +94,52 @@ input[type="checkbox"]{
 }
 
 .burger__line{
+   position: absolute;
+   left: 10%; /*left 50% - half the width */
+
    width: 80%;
    height: calc(var(--fs-1) / 6);
-   margin-inline: auto;
    background-color: var(--color-white-100);
+
+   transition: opacity .5s ease-in-out,
+               top .75s ease-in-out,
+               width .75s ease-in-out .75s,
+               transform 0s ease-in-out 1.5s,
+               height 1s ease-in-out 1.5s;
+}
+
+.burger__line:nth-child(1){
+   top: 15%;
+}
+
+.burger__line:nth-child(2){
+   top: 50%;
+}
+
+.burger__line:nth-child(3){
+   top: 85%;
+}
+
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(1){
+   top: 50%;
+
+   height: 80%;
+   width: calc(var(--fs-1) / 6);
+
+   transform: rotate(-45deg) scale(1.35);
+}
+
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(2){
+   opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(3){
+   top: 50%;
+
+   height: 80%;
+   width: calc(var(--fs-1) / 6);
+
+   transform: rotate(45deg) scale(1.35);
 }
 
 .header__wrapper nav{
@@ -130,8 +169,6 @@ input[type="checkbox"]:checked ~ nav{
 .header__wrapper nav ul li{
    margin-bottom: .5em;
 }
-
-
 
 @media (min-width: 45em){
    .header__wrapper nav ul{
