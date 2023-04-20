@@ -179,7 +179,6 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
 
 .header__wrapper nav{
    position: absolute;
-   /*top: unset; VER OQ EU ROLOU AQUI*/
    top: 0;
    right: 0;
    transform: translateY(-100%);
@@ -210,21 +209,28 @@ input[type="checkbox"]:checked ~ nav{
       display: none;
    }
 
-   .header__wrapper nav{ /*rESOLVER*/
-      position: relative;
+   .header__wrapper nav{
+      position: static;
       top: unset;
-      top: 0;
-      right: 0;
-      transform: translateY(-100%);
+      right: unset;
+      transform: none;
+      z-index: 1;
+      
+      background-color: unset;
 
-      background-color: var(--color-blue-400);
-
-      transition: top .75s steps(6),
-                  transform .75s steps(6);
+      transition: none;
    }
 
    .header__wrapper nav ul{
       display: flex;
       gap: 2.5em;
+
+      padding: 0;
+      
+      text-align: unset;
+   }
+
+   .header__wrapper nav ul li{
+      margin-bottom: 0;
    }
 }
