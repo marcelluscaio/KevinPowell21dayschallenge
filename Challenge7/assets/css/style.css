@@ -147,14 +147,17 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
    30%{
       transform: scaleX(1);
    }
-   50%{
+   60%{
       transform: scaleX(.1);
    }
-   51%{
-      transform: scaleX(.1);
+   61%{
+      transform: scale(.1)
    }
-   100%{
-      transform: scaleX(1)
+   60%{
+      transform: scale(.1)
+   }
+   90%{
+      transform: scale(1)
    }
 }
 
@@ -163,11 +166,11 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
       top: 50%;
       transform: rotate(0deg);
    }
-   50%{
+   60%{
       transform: rotate(0deg);
    }
-   51%{
-      transform: rotateY(var(--rotation)) scaleX(1);
+   61%{
+      transform: rotateZ(var(--rotation)) scaleX(1.25);
    }
    100%{
       transform: rotateZ(var(--rotation)) scaleX(1.25);
@@ -176,7 +179,7 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
 
 .header__wrapper nav{
    position: absolute;
-   top: unset;
+   /*top: unset; VER OQ EU ROLOU AQUI*/
    top: 0;
    right: 0;
    transform: translateY(-100%);
@@ -203,6 +206,23 @@ input[type="checkbox"]:checked ~ nav{
 }
 
 @media (min-width: 45em){
+   .header__wrapper__burger{
+      display: none;
+   }
+
+   .header__wrapper nav{ /*rESOLVER*/
+      position: relative;
+      top: unset;
+      top: 0;
+      right: 0;
+      transform: translateY(-100%);
+
+      background-color: var(--color-blue-400);
+
+      transition: top .75s steps(6),
+                  transform .75s steps(6);
+   }
+
    .header__wrapper nav ul{
       display: flex;
       gap: 2.5em;
