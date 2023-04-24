@@ -141,27 +141,19 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
    }
 
    40%{
-      
+      transform: scale(.1)
    }
 
    41%{
-      
-   }
-
-   30%{
-      transform: scaleX(1);
-   }
-   60%{
-      transform: scaleX(.1);
-   }
-   61%{
       transform: scale(.1)
    }
-   60%{
-      
+
+   71%{
+      transform: scale(1)
    }
+
    100%{
-      
+      transform: scale(1)
    }
 }
 
