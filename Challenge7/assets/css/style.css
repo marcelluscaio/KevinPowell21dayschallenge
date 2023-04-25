@@ -148,6 +148,10 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
       transform: scale(.1)
    }
 
+   42%{
+      transform: scale(.1)
+   }/*Desfazr esse*/
+
    71%{
       transform: scale(1)
    }
