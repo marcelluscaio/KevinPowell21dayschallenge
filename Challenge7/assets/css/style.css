@@ -148,10 +148,6 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
       transform: scale(.1)
    }
 
-   42%{
-      transform: scale(.1)
-   }/*Desfazr esse*/
-
    71%{
       transform: scale(1)
    }
@@ -184,6 +180,22 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
 }
 
 @keyframes lineMovement{
+   30%{
+      top: 50%;
+      transform: rotate(0deg);
+   }
+   60%{
+      transform: rotate(0deg);
+   }
+   61%{
+      transform: rotateZ(var(--rotation)) scaleX(1.25);
+   }
+   100%{
+      transform: rotateZ(var(--rotation)) scaleX(1.25);
+   }
+}
+
+@keyframes lineMovementReverse{
    30%{
       top: 50%;
       transform: rotate(0deg);
