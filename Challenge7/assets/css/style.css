@@ -108,6 +108,11 @@ input[type="checkbox"]{
 
    transition: opacity .5s ease-in-out;
    transform-origin: 0;
+
+   animation-name: lineShrinkingReverse;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
 }
 
 input[type="checkbox"]:checked ~ .header__wrapper__burger{
@@ -158,18 +163,29 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
 }
 
 .burger__line:nth-child(1){
-   top: 15%;
+   --top: 15%;
+   top: var(--top);
    --rotation: 45deg;
 }
 
 .burger__line:nth-child(2){
-   top: 50%;
+   --top: 50%;
+   top: var(--top);
 }
 
 .burger__line:nth-child(3){
-   top: 85%;
+   --top: 85%;
+   top: var(--top);
    --rotation: -45deg;
 }
+
+.burger__line:nth-child(1),
+.burger__line:nth-child(3){
+   animation-name: lineMovementReverse;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+} 
 
 input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(1),
 input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(3){
@@ -196,18 +212,20 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
 }
 
 @keyframes lineMovementReverse{
-   30%{
-      top: 50%;
-      transform: rotate(0deg);
-   }
-   60%{
-      transform: rotate(0deg);
-   }
-   61%{
+   0%{
       transform: rotateZ(var(--rotation)) scaleX(1.25);
+   }
+   40%{
+      transform: rotateZ(var(--rotation)) scaleX(1.25);
+   }
+   41%{
+      transform: rotate(0deg);
+   }
+   71%{      
+      top: 50%;
    }
    100%{
-      transform: rotateZ(var(--rotation)) scaleX(1.25);
+      top: var(--top);
    }
 }
 
