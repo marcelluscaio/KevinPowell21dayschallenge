@@ -102,24 +102,6 @@ input[type="checkbox"]{
    animation-fill-mode: forwards; 
 }
 
-.burger__line{
-   position: absolute;
-   left: 10%;
-	 /*left 50% - half the width */
-
-   width: 80%;
-   height: calc(var(--fs-1) / 6);
-   background-color: var(--color-white-100);
-
-   transition: opacity .5s ease-in-out;
-   transform-origin: 0;
-
-   animation-name: lineShrinkingReverse;
-   animation-duration: 2s;
-   animation-timing-function: ease-in-out;
-   animation-fill-mode: forwards;
-}
-
 input[type="checkbox"]:checked ~ .header__wrapper__burger{
    animation-name: lineShrinking;
    animation-duration: 2s;
@@ -167,6 +149,24 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
    }
 }
 
+.burger__line{
+   position: absolute;
+   left: 10%;
+	 /*left 50% - half the width */
+
+   width: 80%;
+   height: calc(var(--fs-1) / 6);
+   background-color: var(--color-white-100);
+
+   transition: opacity .5s ease-in-out;
+   transform-origin: 0;
+
+   animation-name: lineShrinkingReverse;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+
 .burger__line:nth-child(1){
    --top: 15%;
    top: var(--top);
@@ -190,7 +190,11 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger{
    animation-duration: 2s;
    animation-timing-function: ease-in-out;
    animation-fill-mode: forwards;
-} 
+}
+
+input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(2){
+   opacity: 0;
+}
 
 input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(1),
 input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(3){
@@ -234,10 +238,6 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
    }
 }
 
-input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-child(2){
-   opacity: 0;
-}
-
 .header__wrapper nav{
    position: absolute;
    top: 0;
@@ -267,7 +267,6 @@ input[type="checkbox"]:checked ~ nav{
 }
 
 /*
-   Enhance nav mobile animation
    Create hover
 */
 
