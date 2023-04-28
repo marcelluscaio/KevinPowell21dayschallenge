@@ -271,6 +271,13 @@ input[type="checkbox"]:checked ~ nav{
 */
 
 
+
+/*First section*/
+.banner{
+   background-color: var(--color-blue-300);
+}
+
+/*Breakpoints*/
 @media (min-width: 45em){
    .header__wrapper__burger{
       display: none;
