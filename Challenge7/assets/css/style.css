@@ -275,6 +275,7 @@ input[type="checkbox"]:checked ~ nav{
 /*First section*/
 .banner{
    background-color: var(--color-blue-300);
+   color: var(--color-white-100);
 }
 
 /*Breakpoints*/
