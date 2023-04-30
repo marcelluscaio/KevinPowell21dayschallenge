@@ -53,11 +53,11 @@ a{
    display: inline-block;
    /*This is necessary because inline elements do not grow with padding*/
    
-   padding: 0.25em 1.25em;
+   padding: 0.375em 1.375em;
    background-color: var(--color-beige-400);
 
-
    color: var(--color-white-100);
+   line-height: 1;
    
    border-radius: 2em;
 }
@@ -261,8 +261,8 @@ input[type="checkbox"]:checked ~ .header__wrapper__burger .burger__line:nth-chil
    min-width: 35%;
    background-color: var(--color-blue-400);
 
-   transition: top .75s steps(6),
-               transform .75s steps(6);
+   transition: top .75s ease-in,
+               transform .75s ease-in;
 }
 
 input[type="checkbox"]:checked ~ nav{
@@ -286,14 +286,10 @@ input[type="checkbox"]:checked ~ nav{
 */
 
 
-
 /*First section*/
 .banner{
-   display: flex;
-   align-items: center;
-
    min-height: 50vh;
-   padding-block: 5vh;
+   padding-block: 10vh;
    background-color: var(--color-blue-300);
    
    color: var(--color-white-100);
@@ -301,19 +297,12 @@ input[type="checkbox"]:checked ~ nav{
 
 .banner > .container{
    display: flex;
-   align-items: flex-end;
-   
-   
-   /*padding-block?*/
-}
-
-.banner > .container > *{
-   width: 50%;
+   flex-direction: column;
 }
 
 .banner h1{
-   padding-right: 10%;
-   
+   margin-bottom: .5em;
+
    font-size: var(--fs-6);
    line-height: 1.1;
 }
@@ -328,14 +317,22 @@ input[type="checkbox"]:checked ~ nav{
 
 .banner p{
    font-weight: var(--fw-regular);
+
+   margin-bottom: 1em;
 }
 
 .banner a{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   
    text-transform: uppercase;
 }
 
 /*Breakpoints*/
+/*720px and beyond*/
 @media (min-width: 45em){
+   /*Header*/
    .header__wrapper__burger{
       display: none;
    }
@@ -347,7 +344,7 @@ input[type="checkbox"]:checked ~ nav{
       transform: none;
       z-index: 1;
       
-			min-width: unset;
+      min-width: unset;
       background-color: unset;
 
       transition: none;
@@ -366,4 +363,34 @@ input[type="checkbox"]:checked ~ nav{
    .header__wrapper nav ul li{
       margin-bottom: 0;
    }
+
+   /*First section*/
+   .banner{
+      display: flex;
+      align-items: center;
+
+      padding-block: 15vh;
+   }
+
+   .banner > .container{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+   }
+
+   .banner > .container > *{
+      width: 50%;
+   }
+
+   .banner h1{
+      padding-right: 10%;
+      margin-bottom: unset;
+   }
+
+   .banner a{
+      position: unset;
+      left: unset;
+      transform: unset;
+   }
+
 }
