@@ -278,6 +278,10 @@ input[type="checkbox"]:checked ~ nav{
    color: var(--color-white-100);
 }
 
+.banner h1{
+   color: var(--color-beige-400);
+}
+
 /*Breakpoints*/
 @media (min-width: 45em){
    .header__wrapper__burger{
