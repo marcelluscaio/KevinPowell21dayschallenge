@@ -17,6 +17,8 @@
    --fs-4: clamp(1.71rem, calc(1.48rem + 1.14vw), 3.26rem); /*30px*/
    --fs-5: clamp(2.14rem, calc(1.81rem + 1.62vw), 4.34rem); /*36px*/
    --fs-6: clamp(2.67rem, calc(2.21rem + 2.29vw), 5.79rem); /*90px*/
+
+   --section-padding-block: 10vh;
 }
 
 /*General styling*/
@@ -289,7 +291,7 @@ input[type="checkbox"]:checked ~ nav{
 /*First section*/
 .banner{
    min-height: 50vh;
-   padding-block: 10vh;
+   padding-block: var(--section-padding-block);
    background-color: var(--color-blue-300);
    
    color: var(--color-white-100);
@@ -305,6 +307,7 @@ input[type="checkbox"]:checked ~ nav{
 
    font-size: var(--fs-6);
    line-height: 1.1;
+   text-align: center;
 }
 
 .banner h1 > span{
@@ -312,13 +315,14 @@ input[type="checkbox"]:checked ~ nav{
 }
 
 .banner :is(p, a){
-   font-size: var(--fs-3);
+   font-size: var(--fs-2);
 }
 
 .banner p{
-   font-weight: var(--fw-regular);
-
    margin-bottom: 1em;
+
+   font-weight: var(--fw-regular);   
+   text-align: center;
 }
 
 .banner a{
@@ -332,6 +336,11 @@ input[type="checkbox"]:checked ~ nav{
 /*Breakpoints*/
 /*720px and beyond*/
 @media (min-width: 45em){
+   /*variables*/
+   :root{
+      --section-padding-block: 15vh;
+   }
+   
    /*Header*/
    .header__wrapper__burger{
       display: none;
@@ -368,8 +377,6 @@ input[type="checkbox"]:checked ~ nav{
    .banner{
       display: flex;
       align-items: center;
-
-      padding-block: 15vh;
    }
 
    .banner > .container{
@@ -385,6 +392,10 @@ input[type="checkbox"]:checked ~ nav{
    .banner h1{
       padding-right: 10%;
       margin-bottom: unset;
+   }
+
+   .banner :is(h1, p){
+      text-align: left;
    }
 
    .banner a{
