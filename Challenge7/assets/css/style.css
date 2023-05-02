@@ -333,6 +333,38 @@ input[type="checkbox"]:checked ~ nav{
    text-transform: uppercase;
 }
 
+/*Three Principles*/
+.three-principles{
+   padding-block: var(--section-padding-block);
+   background-color: var(--color-white-100);
+}
+
+.three-principles > .container{
+   /*display: flex;*/
+}
+
+.three-principles article{
+   margin-bottom: var(--fs-3);
+
+   text-align: center;
+}
+
+.three-principles article:last-child{
+   margin-bottom: unset;
+}
+
+.three-principles h2{
+   margin-bottom: .5em;
+
+   color: var(--color-beige-400);
+   font-size: var(--fs-3);
+}
+
+.three-principles p{
+   font-weight: var(--fw-regular);
+   font-size: var(--fs-1);
+}
+
 /*Breakpoints*/
 /*720px and beyond*/
 @media (min-width: 45em){
@@ -402,6 +434,17 @@ input[type="checkbox"]:checked ~ nav{
       position: unset;
       left: unset;
       transform: unset;
+   }
+
+   /*Three Principles*/
+   .three-principles > .container{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .three-principles article{
+      width: 25%;
+      margin-bottom: unset;
    }
 
 }
