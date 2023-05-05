@@ -1,0 +1,77 @@
+.banner{
+   min-height: 50vh;
+   padding-block: var(--section-padding-block);
+   background-color: var(--color-blue-300);
+   
+   color: var(--color-white-100);
+}
+
+.banner > .container{
+   display: flex;
+   flex-direction: column;
+}
+
+.banner h1{
+   margin-bottom: .5em;
+
+   font-size: var(--fs-6);
+   line-height: 1.1;
+   text-align: center;
+}
+
+.banner h1 > span{
+   color: var(--color-beige-400);
+}
+
+.banner :is(p, a){
+   font-size: var(--fs-2);
+}
+
+.banner p{
+   margin-bottom: 1em;
+
+   font-weight: var(--fw-regular);   
+   text-align: center;
+}
+
+.banner a{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   
+   text-transform: uppercase;
+}
+
+/*Breakpoints*/
+/*720px and beyond*/
+@media (min-width: 45em){
+   .banner{
+      display: flex;
+      align-items: center;
+   }
+
+   .banner > .container{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+   }
+
+   .banner > .container > *{
+      width: 50%;
+   }
+
+   .banner h1{
+      padding-right: 10%;
+      margin-bottom: unset;
+   }
+
+   .banner :is(h1, p){
+      text-align: left;
+   }
+
+   .banner a{
+      position: unset;
+      left: unset;
+      transform: unset;
+   }
+}
