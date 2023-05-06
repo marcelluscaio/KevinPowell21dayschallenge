@@ -64,85 +64,6 @@ a{
    border-radius: 2em;
 }
 
-
-/*Three Principles*/
-.three-principles{
-   padding-block: var(--section-padding-block);
-   background-color: var(--color-white-100);
-}
-
-.three-principles article{
-   margin-bottom: var(--fs-3);
-
-   text-align: center;
-}
-
-.three-principles article:last-child{
-   margin-bottom: unset;
-}
-
-.three-principles h2{
-   margin-bottom: .5em;
-
-   color: var(--color-beige-400);
-   font-size: var(--fs-3);
-}
-
-.three-principles p{
-   font-weight: var(--fw-regular);
-   font-size: var(--fs-1);
-}
-
-/*CORE*/
-.core{
-   padding-block: var(--section-padding-block);
-}
-
-.core__main{
-   margin-bottom: calc(var(--fs-1) * 1.5)
-}
-
-.core__main h2{
-   margin-bottom: 1em;
-
-   color: var(--color-beige-400);
-   font-size: var(--fs-4);
-   line-height: 1.1;
-}
-
-.core__main > p{
-   font-weight: var(--fw-regular);
-}
-
-.core__main img{
-   max-width: 100%;
-   margin-block: var(--fs-1);
-}
-
-.core__cards article{
-   padding: var(--fs-3);
-   margin-bottom: var(--fs-1);
-   background-color: var(--color-blue-300);
-
-   color: var(--color-white-100);
-   text-align: center;
-}
-
-.core__cards article:last-child{
-   margin-bottom: unset;
-}
-
-.core__cards article h3{
-   margin-bottom: .75em;
-
-   font-size: var(--fs-3);
-   line-height: 1.1;
-}
-
-.core__cards article p{
-   font-weight: var(--fw-regular);
-}
-
 /*Breakpoints*/
 /*720px and beyond*/
 @media (min-width: 45em){
@@ -150,16 +71,4 @@ a{
    :root{
       --section-padding-block: 15vh;
    }
-
-   /*Three Principles*/
-   .three-principles > .container{
-      display: flex;
-      justify-content: space-between;
-   }
-
-   .three-principles article{
-      width: 25%;
-      margin-bottom: unset;
-   }
-
 }
