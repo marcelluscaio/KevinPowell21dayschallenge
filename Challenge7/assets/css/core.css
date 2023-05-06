@@ -52,5 +52,26 @@
 @media (min-width: 45em){
    .core__cards{
       display: flex;
+      gap: 2vw;
    }
+
+   .core__cards article{
+      padding: var(--fs-2) var(--fs-1);
+      margin-bottom: 0;
+   }
+}
+
+/*1040px and beyond*/
+@media (min-width: 65em){
+   .core .container{
+      display: flex;
+      align-items: flex-start;
+      gap: 10%;
+   }
+
+   .core__cards{
+      flex-direction: column;
+      gap: var(--fs-1);
+   }
+
 }
