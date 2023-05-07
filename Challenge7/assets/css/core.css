@@ -72,7 +72,7 @@
 @media (min-width: 65em){
    .core .container{
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
       gap: 10%;
    }
 
