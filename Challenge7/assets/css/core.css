@@ -19,8 +19,11 @@
 }
 
 .core__main img{
+   display: block;
+
    max-width: 100%;
    margin-block: var(--fs-1);
+   margin-inline: auto;
 }
 
 .core__cards article{
@@ -50,6 +53,10 @@
 /*Breakpoints*/
 /*720px and beyond*/
 @media (min-width: 45em){
+   .core__main img{
+      width: 100%;
+   }
+
    .core__cards{
       display: flex;
       gap: 2vw;
